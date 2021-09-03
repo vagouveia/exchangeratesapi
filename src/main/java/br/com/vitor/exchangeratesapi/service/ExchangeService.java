@@ -9,7 +9,7 @@ import br.com.vitor.exchangeratesapi.entities.Exchange;
 @FeignClient(url="http://api.exchangeratesapi.io", name="exchange")
 public interface ExchangeService {
 
-	@GetMapping("/{version}/latest?access_key=34ebd71f5c82a6027da7fd4246852ee1&format=1")
+	@GetMapping("/{version}/latest?access_key={api key}&format=1")
 	public Exchange getByCurrency (@PathVariable("version") String version );
 
 	
